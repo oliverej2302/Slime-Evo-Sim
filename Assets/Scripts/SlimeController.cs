@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class SlimeController : MonoBehaviour
 {
-    private float moveSpeed;
-    private float visionRange;
-    private float hunger;
-    private float thirst;
+    public float moveSpeed;
+    public float visionRange;
+    public int maxHunger;
+    public int currentHunger;
+    public int maxThirst;
+    public int currentThirst;
 }

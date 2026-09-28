@@ -26,11 +26,14 @@ public class SlimeColourChanger : MonoBehaviour
             Debug.LogError("No shineColourSpriteRenderer found");
             return;
         }
+    }
 
+    public void SetNewColour(Color newColour)
+    {
         // shadow and shine are transparent before import
         // so they automatically scale the baseColour to their transparency etc.
-        baseColourSpriteRenderer.color = baseColour;
-        shadowColourSpriteRenderer.color = baseColour;
-        shineColourSpriteRenderer.color = baseColour;
+        baseColourSpriteRenderer.color = newColour;
+        shadowColourSpriteRenderer.color = newColour;
+        shineColourSpriteRenderer.color = newColour;
     }
 }
