@@ -465,6 +465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8034468736616165942}
   - component: {fileID: 3551207525387116530}
+  - component: {fileID: 3666549898043949898}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -508,3 +509,19 @@ MonoBehaviour:
   baseColourSpriteRenderer: {fileID: 6083162277875005702}
   shadowColourSpriteRenderer: {fileID: 6489743295024167526}
   shineColourSpriteRenderer: {fileID: 5021895453162772635}
+--- !u!114 &3666549898043949898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751055966237538585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f565b5697eb2349aa1d17edc2ddab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeController
+  moveSpeed: 0
+  visionRange: 0
+  hunger: 0
+  thirst: 0
