@@ -13,6 +13,11 @@ public class SlimeManager : MonoBehaviour
             SpawnNewSlime(spawnPosition);
         }
 
+        TimeTickSystem.OnTick += delegate (object sender, TimeTickSystem.OnTickEventArgs e)
+        {
+            Debug.Log("Tick = " + e.tick);
+        };
+
     }
 
     private void SpawnNewSlime(Vector3 spawnPosition)
@@ -21,11 +26,12 @@ public class SlimeManager : MonoBehaviour
         SlimeColourChanger newSlimeColourChanger = newSlimeInstance.GetComponent<SlimeColourChanger>();
         newSlimeColourChanger.SetNewColour(Color.green);
         SlimeController newSlimeController = newSlimeInstance.GetComponent<SlimeController>();
-        newSlimeController.moveSpeed = 4f;
+        newSlimeController.moveSpeed = 0.4f;
         newSlimeController.visionRange = 3f;
         newSlimeController.maxHunger = 100;
         newSlimeController.currentHunger = 50;
         newSlimeController.maxThirst = 100;
         newSlimeController.currentThirst = 50;
+        newSlimeController.livingStatDrain = 0.2f;
     }
 }
