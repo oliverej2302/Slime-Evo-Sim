@@ -9,6 +9,7 @@ public class TimeTickSystem : MonoBehaviour
     }
     public static event EventHandler<OnTickEventArgs> OnTick;
     public static float TickInterval = 0.2f; //200ms = 5 ticks/s
+    // public static float TickInterval = 1f;
     private int tick;
     private float tickTimer;
 

@@ -7,16 +7,16 @@ public class SlimeManager : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
-            Vector3 spawnPosition = new Vector3(i, 0, 0);
+            Vector3 spawnPosition = new Vector3(-2 + i, 0, 0);
             SpawnNewSlime(spawnPosition);
         }
 
-        TimeTickSystem.OnTick += delegate (object sender, TimeTickSystem.OnTickEventArgs e)
-        {
-            Debug.Log("Tick = " + e.tick);
-        };
+        // TimeTickSystem.OnTick += delegate (object sender, TimeTickSystem.OnTickEventArgs e)
+        // {
+        //     Debug.Log("Tick = " + e.tick);
+        // };
 
     }
 
@@ -27,11 +27,11 @@ public class SlimeManager : MonoBehaviour
         newSlimeColourChanger.SetNewColour(Color.green);
         SlimeController newSlimeController = newSlimeInstance.GetComponent<SlimeController>();
         newSlimeController.moveSpeed = 0.4f;
-        newSlimeController.visionRange = 3f;
+        newSlimeController.visionRange = 10f;
         newSlimeController.maxHunger = 100;
-        newSlimeController.currentHunger = 50;
+        newSlimeController.currentHunger = UnityEngine.Random.Range(40f, 80f);
         newSlimeController.maxThirst = 100;
-        newSlimeController.currentThirst = 50;
+        newSlimeController.currentThirst = UnityEngine.Random.Range(40f, 80f);
         newSlimeController.livingStatDrain = 0.2f;
     }
 }
